@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "nodemon build.js & http-server build -p 3030"
+    "start": "nodemon -e js,jade build.js & http-server build -p 3030"
   },
   "private": true,
   "dependencies": {
