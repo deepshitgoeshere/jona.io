@@ -8,8 +8,18 @@
   justify-content: center;
   align-items: center;
 
-  &.navigation-green {
+  &.navigation-red {
     background-color: #F6511D;
+    li { color: #fff; }
+  }
+
+  &.navigation-yellow {
+    background-color: #FFB400;
+    li { color: #fff; }
+  }
+
+  &.navigation-green {
+    background-color: #7FB800;
     li { color: #fff; }
   }
 
