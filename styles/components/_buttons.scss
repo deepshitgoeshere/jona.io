@@ -2,8 +2,39 @@ a > .button {
   border: 1px solid black;
   border-radius: 7px;
   padding: 10px;
+  margin-bottom: 10px;
 
   .button-title {
     font-size: 18px;
+  }
+
+  &.button-red {
+    border: 1px dashed #F6511D;
+    transition: .3s background-color, .3s color;
+
+    &:hover {
+      background-color: #F6511D;
+      color: #fff;
+    }
+  }
+
+  &.button-yellow {
+    border: 1px dashed #FFB400;
+    transition: .3s background-color, .3s color;
+
+    &:hover {
+      background-color: #FFB400;
+      color: #fff;
+    }
+  }
+
+  &.button-green {
+    border: 1px dashed #7FB800;
+    transition: .3s background-color, .3s color;
+
+    &:hover {
+      background-color: #7FB800;
+      color: #fff;
+    }
   }
 }
