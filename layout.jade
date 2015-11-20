@@ -5,6 +5,7 @@ html
       title jona hugger
     meta(content='cool web developer', name='keywords')
     meta(content='jona hugger', name='author')
+    link(rel='stylesheet' href='//brick.a.ssl.fastly.net/Domine:400/Karla:400')
     link(rel='stylesheet' href='css/main.css')
     block styles
   body
@@ -14,5 +15,6 @@ html
       li.brand jona
       li #[a(href='/blog').blog blog]
       li #[a(href='mailto:jona@jona.io').mail jona@jona.io]
-    block content
+    .container
+      block content
     block scripts

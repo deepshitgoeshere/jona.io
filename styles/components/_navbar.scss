@@ -1,12 +1,17 @@
 .navigation {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 10px 0 10px 0;
   border: 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+
+  &.navigation-green {
+    background-color: #F6511D;
+    li { color: #fff; }
+  }
 
   li {
     display: block;
@@ -34,28 +39,20 @@ a {
   &.about:hover {
     background-color: #F6511D;
     color: #fff;
-    border: 1px solid darken(#F6511D, 5%);
-    margin: -1px;
-  }
+}
 
   &.projects:hover {
     background-color: #FFB400;
     color: #fff;
-    border: 1px solid darken(#FFB400, 5%);
-    margin: -1px;
   }
 
   &.blog:hover {
     background-color: #7FB800;
     color: #fff;
-    border: 1px solid darken(#7FB800, 5%);
-    margin: -1px;
   }
 
   &.mail:hover {
     background-color: #0D2C54;
     color: #fff;
-    border: 1px solid darken(#0D2C54, 5%);
-    margin: -1px;
   }
 }
