@@ -8,5 +8,11 @@ html
     link(rel='stylesheet' href='css/main.css')
     block styles
   body
+    ul.navigation
+      li #[a(href='/about').about about]
+      li #[a(href='/projects').projects projects]
+      li.brand jona
+      li #[a(href='/blog').blog blog]
+      li #[a(href='mailto:jona@jona.io').mail jona@jona.io]
     block content
     block scripts
