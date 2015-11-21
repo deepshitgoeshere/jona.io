@@ -6,15 +6,11 @@ html
     meta(content='cool web developer', name='keywords')
     meta(content='jona hugger', name='author')
     link(rel='stylesheet' href='//brick.a.ssl.fastly.net/Domine:400/Karla:400')
-    link(rel='stylesheet' href='css/main.css')
-    block styles
+    link(rel='stylesheet' href='/css/main.css')
   body
-    ul.navigation
-      li #[a(href='/about').about about]
-      li #[a(href='/projects').projects projects]
-      li.brand jona
-      li #[a(href='/blog').blog blog]
-      li #[a(href='mailto:jona@jona.io').mail jona@jona.io]
+    block navbar
+      ul.navigation
+        include ./includes/navbar.jade
     .container
       block content
     block scripts

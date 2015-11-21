@@ -1,6 +1,7 @@
 const Metalsmith = require('metalsmith')
-const MJade = require('metalsmith-jade')
-const MSass = require('metalsmith-sass')
+const Jade = require('metalsmith-jade')
+const Sass = require('metalsmith-sass')
+const Permalinks = require('metalsmith-permalinks')
 
 const path = require('path')
 
@@ -9,8 +10,11 @@ const path = require('path')
 const core = Metalsmith(path.join(__dirname, 'core'))
   .source('./')
   .destination('../build')
-  .use(MJade({
+  .use(Jade({
     pretty: true
+  }))
+  .use(Permalinks({
+    pattern: ':title'
   }))
   .build(err => {
     if (err) { throw new Error(err) }
@@ -22,7 +26,7 @@ const core = Metalsmith(path.join(__dirname, 'core'))
 const styles = Metalsmith(path.join(__dirname, 'styles'))
   .source('./')
   .destination('../build/css')
-  .use(MSass())
+  .use(Sass())
   .build(err => {
     if (err) { throw new Error(err) }
   })
