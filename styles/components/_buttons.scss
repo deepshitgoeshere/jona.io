@@ -3,38 +3,39 @@ a > .button {
   border-radius: 7px;
   padding: 10px;
   margin-bottom: 10px;
+  color: black;
 
   .button-title {
     font-size: 18px;
   }
 
   &.button-red {
-    border: 1px dashed #F6511D;
+    border: 1px dashed $red;
     transition: .3s background-color, .3s color;
 
     &:hover {
-      background-color: #F6511D;
-      color: #fff;
+      background-color: $red;
+      color: white;
     }
   }
 
   &.button-yellow {
-    border: 1px dashed #FFB400;
+    border: 1px dashed $yellow;
     transition: .3s background-color, .3s color;
 
     &:hover {
-      background-color: #FFB400;
-      color: #fff;
+      background-color: $yellow;
+      color: white;
     }
   }
 
   &.button-green {
-    border: 1px dashed #7FB800;
+    border: 1px dashed $yellow;
     transition: .3s background-color, .3s color;
 
     &:hover {
-      background-color: #7FB800;
-      color: #fff;
+      background-color: $yellow;
+      color: white;
     }
   }
 }

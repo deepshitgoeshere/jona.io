@@ -9,18 +9,18 @@
   align-items: center;
 
   &.navigation-red {
-    background-color: #F6511D;
-    li { color: #fff; }
+    background-color: $red;
+    li { color: white; }
   }
 
   &.navigation-yellow {
-    background-color: #FFB400;
-    li { color: #fff; }
+    background-color: $yellow;
+    li { color: white; }
   }
 
   &.navigation-green {
-    background-color: #7FB800;
-    li { color: #fff; }
+    background-color: $green;
+    li { color: white; }
   }
 
   li {
@@ -47,22 +47,22 @@
 
 a {
   &.about:hover {
-    background-color: #F6511D;
-    color: #fff;
+    background-color: $red;
+    color: white;
 }
 
   &.projects:hover {
-    background-color: #FFB400;
-    color: #fff;
+    background-color: $yellow;
+    color: white;
   }
 
   &.blog:hover {
-    background-color: #7FB800;
-    color: #fff;
+    background-color: $green;
+    color: white;
   }
 
   &.mail:hover {
-    background-color: #0D2C54;
-    color: #fff;
+    background-color: $blue;
+    color: white;
   }
 }
