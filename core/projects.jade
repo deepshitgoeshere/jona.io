@@ -1,0 +1,40 @@
+extends ../layout.jade
+
+block navbar
+  ul.navigation.navigation-yellow
+    include ../includes/navbar.jade
+    
+block content
+  h1 projects
+  ul.cards
+    a(href='http://github.com/retrospring/next')
+      li
+        .title NEXT
+        .description the next version of retrospring
+    a(href='http://github.com/retrospring/nsc')
+      li
+        .title nsc
+        .description angular style commit generator
+    a(href='http://github.com/ix/noodlesoup')
+      li
+        .title noodlesoup
+        .description an anime blogging engine
+    a(href='http://github.com/sup/vis')
+      li
+        .title vis
+        .description music visualizer in javascript
+    a(href='http://github.com/sup/youreasquidnow')
+      li
+        .title youreasquidnow
+        .description making a meme in all languages
+  
+  h1 contributions
+  ul.cards.cards-alternative
+    a(href='http://github.com/nodejs')
+      li
+        .title node.js
+        .description website and incusivity work
+    a(href='http://github.com/Retrospring')
+      li
+        .title retrospring
+        .description devops and javascript
