@@ -1,4 +1,5 @@
 const Metalsmith = require('metalsmith')
+const express = require('express')
 const Jade = require('metalsmith-jade')
 const Sass = require('metalsmith-sass')
 const Permalinks = require('metalsmith-permalinks')
@@ -30,3 +31,12 @@ const styles = Metalsmith(path.join(__dirname, 'styles'))
   .build(err => {
     if (err) { throw new Error(err) }
   })
+
+// Spin up a small Express server that just serves the compiled files as static
+// directory. This is required because of the SSL redirection middleware (which
+// will come later).
+const app = express()
+
+app.use(express.static(path.join(__dirname, 'build')))
+
+app.listen(process.env['PORT'] || 3030)
