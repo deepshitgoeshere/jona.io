@@ -30,11 +30,11 @@ a > .button {
   }
 
   &.button-green {
-    border: 1px dashed $yellow;
+    border: 1px dashed $green;
     transition: .3s background-color, .3s color;
 
     &:hover {
-      background-color: $yellow;
+      background-color: $green;
       color: white;
     }
   }
