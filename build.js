@@ -1,6 +1,4 @@
 const Metalsmith = require('metalsmith')
-const express = require('express')
-const moment = require('moment')
 const Jade = require('metalsmith-jade')
 const Sass = require('metalsmith-sass')
 const Permalinks = require('metalsmith-permalinks')
@@ -9,6 +7,8 @@ const Markdown = require('metalsmith-markdown')
 const Layouts = require('metalsmith-layouts')
 const Pagination = require('metalsmith-pagination')
 
+const express = require('express')
+const moment = require('moment')
 const path = require('path')
 
 // The core pipeline. This is the portion of the page you see when visiting the
