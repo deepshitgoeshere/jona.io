@@ -84,7 +84,7 @@ const blog = Metalsmith(path.join(__dirname, 'blog'))
 function dateFormat () {
   return (files, metalsmith, done) => {
     files['index.html'].pagination.files.forEach(c => {
-      c.sdate = moment(c.date).fromNow()
+      c.sdate = moment(moment()).diff(c.date, 'days') + ' days ago'
     })
     done()
   }
