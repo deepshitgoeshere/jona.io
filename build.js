@@ -26,25 +26,6 @@ const core = Metalsmith(path.join(__dirname, 'core'))
     if (err) { throw new Error(err) }
   })
 
-// The styles pipeline. I need a separate one because the styles are global,
-// they're not pipeline-specific. Bundles up SCSS files and pipes them (or IT)
-// into ./build/css.
-const styles = Metalsmith(path.join(__dirname, 'styles'))
-  .source('./')
-  .destination('../build/css')
-  .use(Sass())
-  .build(err => {
-    if (err) { throw new Error(err) }
-  })
-
-// Same with javascript. Separate build pipeline.
-const javascripts = Metalsmith(path.join(__dirname, 'javascripts'))
-  .source('./')
-  .destination('../build/js')
-  .build(err => {
-    if (err) { throw new Error(err) }
-  })
-
 // The pipeline that compiles the blog posts. It also generates a paginated
 // index. The only problem with this right now is that the compiled HTML looks
 // ugly because we're using a different compiler, but that's not even a serious
@@ -81,6 +62,28 @@ const blog = Metalsmith(path.join(__dirname, 'blog'))
     if (err) { throw new Error(err) }
   })
 
+// The styles pipeline. I need a separate one because the styles are global,
+// they're not pipeline-specific. Bundles up SCSS files and pipes them (or IT)
+// into ./build/css.
+const styles = Metalsmith(path.join(__dirname, 'styles'))
+  .source('./')
+  .destination('../build/css')
+  .use(Sass())
+  .build(err => {
+    if (err) { throw new Error(err) }
+  })
+
+// Same with javascript. Separate build pipeline.
+const javascripts = Metalsmith(path.join(__dirname, 'javascripts'))
+  .source('./')
+  .destination('../build/js')
+  .build(err => {
+    if (err) { throw new Error(err) }
+  })
+
+// This Metalsmith middleware adds an attribute to every file in a pagination
+// that specifies how many days ago it was created. It uses moment.js and the
+// `date` metadata.
 function dateFormat () {
   return (files, metalsmith, done) => {
     files['index.html'].pagination.files.forEach(c => {
