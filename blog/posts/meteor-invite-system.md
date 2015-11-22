@@ -176,4 +176,4 @@ If someone not logged in visits the `/register` route and doesn't have a `?token
 
 Try and visit http://localhost:3000/register?token=aaaaaaaaaaaaaaaaaaaa, and see if signing up works!
 
-If there's any questions that remain after this (or if it doesn't work because I've missed something), or if you just want to say hello, email me at [jona@schisma.co](mailto:jona@schisma.co). Toodles
+If there's any questions that remain after this (or if it doesn't work because I've missed something), or if you just want to say hello, email me at [jona@schisma.co](mailto:jona@jona.io). Toodles!
