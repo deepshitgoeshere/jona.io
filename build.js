@@ -35,7 +35,7 @@ const blog = Metalsmith(path.join(__dirname, 'blog'))
   .destination('../build/blog')
   .use(Collections({
     posts: {
-      pattern: 'posts/*.md',
+      pattern: '*.md',
       sortBy: 'date',
       reverse: true
     }
