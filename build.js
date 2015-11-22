@@ -37,6 +37,18 @@ const styles = Metalsmith(path.join(__dirname, 'styles'))
     if (err) { throw new Error(err) }
   })
 
+// Same with javascript. Separate build pipeline.
+const javascripts = Metalsmith(path.join(__dirname, 'javascripts'))
+  .source('./')
+  .destination('../build/js')
+  .build(err => {
+    if (err) { throw new Error(err) }
+  })
+
+// The pipeline that compiles the blog posts. It also generates a paginated
+// index. The only problem with this right now is that the compiled HTML looks
+// ugly because we're using a different compiler, but that's not even a serious
+// problem.
 const blog = Metalsmith(path.join(__dirname, 'blog'))
   .source('./')
   .destination('../build/blog')
@@ -55,7 +67,7 @@ const blog = Metalsmith(path.join(__dirname, 'blog'))
       path: 'index.html'
     }
   }))
-  .use(Markdown())
+  .use(Markdown({ langPrefix: 'language-' }))
   .use(dateFormat())
   .use(Layouts({
     engine: 'jade',

@@ -7,10 +7,11 @@ html
     meta(content='jona hugger', name='author')
     link(rel='stylesheet' href='//brick.a.ssl.fastly.net/Domine:400/Muli:200,400')
     link(rel='stylesheet' href='/css/main.css')
+    block styles
+    block scripts
   body
     block navbar
       ul.navigation
         include navbar.jade
     .container
       block content
-    block scripts

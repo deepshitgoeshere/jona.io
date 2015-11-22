@@ -27,7 +27,7 @@ Router.route '/', ->
 
 Now, we're going to deviate from the norm which is `accounts-ui` and use the fantastic `useraccounts` package system, which means you want to install a package that's preconfigured for a CSS framework or the unstyled version, which you can customize yourself. I'll just go with Bootstrap:
 
-```sh
+```bash
 meteor add useraccounts:bootstrap
 meteor add useraccounts:iron-routing
 # If you haven't installed Bootstrap:
@@ -94,7 +94,7 @@ UserInvitations.attachSchema(userInvitationSchema)
 
 We create the `used` field because it's always wise to keep tokens instead of deleting them, for whatever purpose (You can, though). Next, let's add some tokens via the Meteor mongo console:
 
-```sh
+```bash
 meteor mongo
 meteor:PRIMARY> db.invitations.insert({token: 'aaaaaaaaaaaaaaaaaaaa', used: false});
 ```

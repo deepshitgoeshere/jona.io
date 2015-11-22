@@ -1,5 +1,11 @@
 extends layout.jade
 
+block styles
+  link(rel='stylesheet' href='/css/prism.css')
+
+block scripts
+  script(src='/js/prism.min.js')
+
 block navbar
   ul.navigation.navigation-green
     include navbar.jade
