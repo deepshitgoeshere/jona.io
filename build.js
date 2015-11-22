@@ -1,6 +1,4 @@
 const Metalsmith = require('metalsmith')
-const express = require('express')
-const moment = require('moment')
 const Jade = require('metalsmith-jade')
 const Sass = require('metalsmith-sass')
 const Permalinks = require('metalsmith-permalinks')
@@ -9,11 +7,13 @@ const Markdown = require('metalsmith-markdown')
 const Layouts = require('metalsmith-layouts')
 const Pagination = require('metalsmith-pagination')
 
+const express = require('express')
+const moment = require('moment')
 const path = require('path')
 
 // The core pipeline. This is the portion of the page you see when visiting the
 // index. It's basically just Jade files.
-const core = Metalsmith(path.join(__dirname, 'core'))
+const main = Metalsmith(path.join(__dirname, 'main'))
   .source('./')
   .destination('../build')
   .use(Jade({
@@ -22,25 +22,6 @@ const core = Metalsmith(path.join(__dirname, 'core'))
   .use(Permalinks({
     pattern: ':title'
   }))
-  .build(err => {
-    if (err) { throw new Error(err) }
-  })
-
-// The styles pipeline. I need a separate one because the styles are global,
-// they're not pipeline-specific. Bundles up SCSS files and pipes them (or IT)
-// into ./build/css.
-const styles = Metalsmith(path.join(__dirname, 'styles'))
-  .source('./')
-  .destination('../build/css')
-  .use(Sass())
-  .build(err => {
-    if (err) { throw new Error(err) }
-  })
-
-// Same with javascript. Separate build pipeline.
-const javascripts = Metalsmith(path.join(__dirname, 'javascripts'))
-  .source('./')
-  .destination('../build/js')
   .build(err => {
     if (err) { throw new Error(err) }
   })
@@ -54,7 +35,7 @@ const blog = Metalsmith(path.join(__dirname, 'blog'))
   .destination('../build/blog')
   .use(Collections({
     posts: {
-      pattern: 'posts/*.md',
+      pattern: '*.md',
       sortBy: 'date',
       reverse: true
     }
@@ -81,6 +62,28 @@ const blog = Metalsmith(path.join(__dirname, 'blog'))
     if (err) { throw new Error(err) }
   })
 
+// The styles pipeline. I need a separate one because the styles are global,
+// they're not pipeline-specific. Bundles up SCSS files and pipes them (or IT)
+// into ./build/css.
+const styles = Metalsmith(path.join(__dirname, 'styles'))
+  .source('./')
+  .destination('../build/css')
+  .use(Sass())
+  .build(err => {
+    if (err) { throw new Error(err) }
+  })
+
+// Same with javascript. Separate build pipeline.
+const javascripts = Metalsmith(path.join(__dirname, 'javascripts'))
+  .source('./')
+  .destination('../build/js')
+  .build(err => {
+    if (err) { throw new Error(err) }
+  })
+
+// This Metalsmith middleware adds an attribute to every file in a pagination
+// that specifies how many days ago it was created. It uses moment.js and the
+// `date` metadata.
 function dateFormat () {
   return (files, metalsmith, done) => {
     files['index.html'].pagination.files.forEach(c => {
@@ -96,5 +99,11 @@ function dateFormat () {
 const app = express()
 
 app.use(express.static(path.join(__dirname, 'build')))
+app.use(function forwardToHttps (req, res, next) {
+  if (req.headers['x-forwarded-proto'] === 'http') {
+    return res.redirect(['https://', req.get('Host'), req.url].join(''))
+  }
+  next()
+})
 
 app.listen(process.env['PORT'] || 3030)

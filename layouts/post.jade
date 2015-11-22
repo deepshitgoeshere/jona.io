@@ -1,4 +1,4 @@
-extends layout.jade
+extends main.jade
 
 block styles
   link(rel='stylesheet' href='/css/prism.css')
@@ -7,8 +7,8 @@ block scripts
   script(src='/js/prism.min.js')
 
 block navbar
-  ul.navigation.navigation-green
-    include navbar.jade
+  ul.navbar.navbar-green
+    include partials/navbar.jade
 
 block content
   - var c = contents
