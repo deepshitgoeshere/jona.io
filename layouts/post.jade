@@ -1,0 +1,15 @@
+extends layout.jade
+
+block navbar
+  ul.navigation.navigation-green
+    include navbar.jade
+
+block content
+  - var c = contents
+  h1= title
+  p!= c
+  
+  .br-small
+  a(href='/blog')
+    .button.button-green
+      .button-title back to the blog

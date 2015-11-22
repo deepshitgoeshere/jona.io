@@ -3,6 +3,10 @@ const express = require('express')
 const Jade = require('metalsmith-jade')
 const Sass = require('metalsmith-sass')
 const Permalinks = require('metalsmith-permalinks')
+const Collections = require('metalsmith-collections')
+const Markdown = require('metalsmith-markdown')
+const Layouts = require('metalsmith-layouts')
+const Pagination = require('metalsmith-pagination')
 
 const path = require('path')
 
@@ -28,6 +32,37 @@ const styles = Metalsmith(path.join(__dirname, 'styles'))
   .source('./')
   .destination('../build/css')
   .use(Sass())
+  .build(err => {
+    if (err) { throw new Error(err) }
+  })
+
+const blog = Metalsmith(path.join(__dirname, 'blog'))
+  .source('./')
+  .destination('../build/blog')
+  .use(Collections({
+    posts: {
+      pattern: 'posts/*.md',
+      sortBy: 'date',
+      reverse: true
+    }
+  }))
+  .use(Markdown())
+  .use(Layouts({
+    engine: 'jade',
+    default: 'post.jade',
+    directory: '../layouts'
+  }))
+  .use(Permalinks({
+    pattern: ':short'
+  }))
+  .use(Pagination({
+    'collections.posts': {
+      perPage: 4,
+      layout: 'pagination.jade',
+      first: 'index.html',
+      path: ':num/index.html'
+    }
+  }))
   .build(err => {
     if (err) { throw new Error(err) }
   })
