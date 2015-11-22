@@ -1,5 +1,6 @@
 const Metalsmith = require('metalsmith')
 const express = require('express')
+const moment = require('moment')
 const Jade = require('metalsmith-jade')
 const Sass = require('metalsmith-sass')
 const Permalinks = require('metalsmith-permalinks')
@@ -46,7 +47,16 @@ const blog = Metalsmith(path.join(__dirname, 'blog'))
       reverse: true
     }
   }))
+  .use(Pagination({
+    'collections.posts': {
+      perPage: 4,
+      layout: 'pagination.jade',
+      first: 'index.html',
+      path: 'index.html'
+    }
+  }))
   .use(Markdown())
+  .use(dateFormat())
   .use(Layouts({
     engine: 'jade',
     default: 'post.jade',
@@ -55,17 +65,18 @@ const blog = Metalsmith(path.join(__dirname, 'blog'))
   .use(Permalinks({
     pattern: ':short'
   }))
-  .use(Pagination({
-    'collections.posts': {
-      perPage: 4,
-      layout: 'pagination.jade',
-      first: 'index.html',
-      path: ':num/index.html'
-    }
-  }))
   .build(err => {
     if (err) { throw new Error(err) }
   })
+
+function dateFormat () {
+  return (files, metalsmith, done) => {
+    files['index.html'].pagination.files.forEach(c => {
+      c.sdate = moment(c.date).fromNow()
+    })
+    done()
+  }
+}
 
 // Spin up a small Express server that just serves the compiled files as static
 // directory. This is required because of the SSL redirection middleware (which

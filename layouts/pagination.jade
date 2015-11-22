@@ -1,1 +1,12 @@
 extends layout.jade
+
+block navbar
+  ul.navigation.navigation-green
+    include navbar.jade
+
+block content
+  each page in pagination.files
+    .blog-list
+      .grey= page.sdate
+      | >>
+      a(href='/blog/#{page.short}')= page.title
