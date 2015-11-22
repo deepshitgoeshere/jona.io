@@ -1,0 +1,17 @@
+ul.blog-list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 20px;
+
+  li {
+    .grey,
+    p,
+    a {
+      display: inline-block;
+    }
+
+    .grey {
+      color: gray;
+    }
+  }
+}
