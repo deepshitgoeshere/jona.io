@@ -1,6 +1,6 @@
 // navigation: stuff for the navbar
 
-.navigation {
+.navbar {
   list-style: none;
   margin: 0;
   padding: 10px 0 10px 0;
@@ -10,17 +10,17 @@
   justify-content: center;
   align-items: center;
 
-  &.navigation-red {
+  &.navbar-red {
     background-color: $red;
     li { color: white; }
   }
 
-  &.navigation-yellow {
+  &.navbar-yellow {
     background-color: $yellow;
     li { color: white; }
   }
 
-  &.navigation-green {
+  &.navbar-green {
     background-color: $green;
     li { color: white; }
   }
