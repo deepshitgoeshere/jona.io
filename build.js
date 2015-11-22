@@ -13,7 +13,7 @@ const path = require('path')
 
 // The core pipeline. This is the portion of the page you see when visiting the
 // index. It's basically just Jade files.
-const core = Metalsmith(path.join(__dirname, 'core'))
+const main = Metalsmith(path.join(__dirname, 'main'))
   .source('./')
   .destination('../build')
   .use(Jade({
