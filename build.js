@@ -99,5 +99,11 @@ function dateFormat () {
 const app = express()
 
 app.use(express.static(path.join(__dirname, 'build')))
+app.use(function forwardToHttps (req, res, next) {
+  if (req.headers['x-forwarded-proto'] === 'http') {
+    return res.redirect(['https://', req.get('Host'), req.url].join(''))
+  }
+  next()
+})
 
 app.listen(process.env['PORT'] || 3030)
