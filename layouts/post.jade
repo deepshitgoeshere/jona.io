@@ -11,9 +11,9 @@ block navbar
     include partials/navbar.jade
 
 block content
-  - var c = contents
   h1= title
-  p!= c
+  .blog-contents
+    p!= contents
   
   .br-small
   a(href='/blog')

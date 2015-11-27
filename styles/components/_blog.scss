@@ -6,6 +6,8 @@ ul.blog-list {
   font-size: 20px;
 
   li {
+    margin-bottom: 10px;
+
     .grey,
     p,
     a {
@@ -15,5 +17,13 @@ ul.blog-list {
     .grey {
       color: gray;
     }
+  }
+}
+
+.blog-contents {
+  > p {
+    font-size: 20px;
+    letter-spacing: 0.6px;
+    line-height: 25px;
   }
 }
