@@ -5,10 +5,10 @@ block navbar
     include partials/navbar-content.jade
 
 block content
-  h1 blog posts
-  ul.blog-list
+  .text.-large blog posts
+  ul.blog
     each page in pagination.files
-      li
-        .grey= page.sdate
+      li.item
+        .text.-grey= page.sdate
         |  >> 
         a(href='/blog/#{page.short}')= page.title
