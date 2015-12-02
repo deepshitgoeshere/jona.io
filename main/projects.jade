@@ -1,44 +1,44 @@
 extends ../layouts/main.jade
 
 block navbar
-  ul.navbar.navbar-yellow
-    include ../layouts/partials/navbar.jade
+  ul.navbar.-yellow
+    include ../layouts/partials/navbar-content.jade
     
 block content
-  h1 projects
+  .text.-large projects
   ul.cards
     a(href='http://github.com/retrospring/next')
-      li
+      li.item
         .title NEXT
         .description the next version of retrospring
     a(href='http://github.com/sup/jona.io')
-      li
+      li.item
         .title jona.io
         .description yes, this site
     a(href='http://github.com/retrospring/nsc')
-      li
+      li.item
         .title nsc
         .description angular style commit generator
     a(href='http://github.com/ix/noodlesoup')
-      li
+      li.item
         .title noodlesoup
         .description an anime blogging engine
     a(href='http://github.com/sup/vis')
-      li
+      li.item
         .title vis
         .description music visualizer in javascript
     a(href='http://github.com/sup/youreasquidnow')
-      li
+      li.item
         .title youreasquidnow
         .description making a meme in all languages
   
-  h1 contributions
-  ul.cards.cards-alternative
+  .text.-large contributions
+  ul.cards.-blue
     a(href='http://github.com/nodejs')
-      li
+      li.item
         .title node.js
         .description website and inclusivity work
     a(href='http://github.com/Retrospring')
-      li
+      li.item
         .title retrospring
         .description devops and javascript

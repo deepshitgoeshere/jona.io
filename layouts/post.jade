@@ -7,16 +7,16 @@ block scripts
   script(src='/js/prism.min.js')
 
 block navbar
-  ul.navbar.navbar-green
-    include partials/navbar.jade
+  ul.navbar.-green
+    include partials/navbar-content.jade
 
 block content
   h1= title
-  .blog-contents
+  .text.-medium
     p!= contents
   
-  .br-small
+  .whitespace.-small
   a(href='/blog')
-    .button.button-green
-      .button-title back to the blog
-  .br-small
+    .button.-green
+      .title back to the blog
+  .whitespace.-small

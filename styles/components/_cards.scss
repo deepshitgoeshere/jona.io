@@ -5,8 +5,8 @@ ul.cards {
   margin: 0;
   padding: 0;
 
-  &.cards-alternative {
-    li {
+  &.-blue {
+    > a > .item {
       border: 1px $blue dashed;
 
       &:hover {
@@ -15,7 +15,7 @@ ul.cards {
     }
   }
 
-  li {
+  > a > .item {
     color: black;
     display: inline-block;
     border: 1px black dashed;
@@ -26,7 +26,7 @@ ul.cards {
     margin-right: 20px;
     transition: .2s background, .2s color;
 
-    .title {
+    > .title {
       font-size: 20px;
       font-style: italic;
     }
