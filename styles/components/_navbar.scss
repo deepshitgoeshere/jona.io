@@ -12,17 +12,17 @@
 
   &.-red {
     background-color: $red;
-    li { color: white; }
+    > li { color: white; }
   }
 
   &.-yellow {
     background-color: $yellow;
-    li { color: white; }
+    > li { color: white; }
   }
 
   &.-green {
     background-color: $green;
-    li { color: white; }
+    > li { color: white; }
   }
 
   > li {
@@ -39,32 +39,30 @@
 
       transition-duration: .2s;
       transition-property: background-color, color;
+
+      &#about:hover {
+        background-color: $red;
+        color: white;
+      }
+
+      &#projects:hover {
+        background-color: $yellow;
+        color: white;
+      }
+
+      &#blog:hover {
+        background-color: $green;
+        color: white;
+      }
+
+      &#mail:hover {
+        background-color: $blue;
+        color: white;
+      }
     }
 
     &.-brand {
       font-size: 17px;
     }
-  }
-}
-
-a {
-  &#about:hover {
-    background-color: $red;
-    color: white;
-  }
-
-  &#projects:hover {
-    background-color: $yellow;
-    color: white;
-  }
-
-  &#blog:hover {
-    background-color: $green;
-    color: white;
-  }
-
-  &#mail:hover {
-    background-color: $blue;
-    color: white;
   }
 }
