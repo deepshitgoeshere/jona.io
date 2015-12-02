@@ -1,29 +1,15 @@
 // blog: styles specifically for blog layout
 
-ul.blog-list {
+.blog-list {
   list-style-type: none;
   padding: 0;
   font-size: 20px;
 
-  li {
+  > .item {
     margin-bottom: 10px;
 
-    .grey,
-    p,
-    a {
+    > * {
       display: inline-block;
     }
-
-    .grey {
-      color: gray;
-    }
-  }
-}
-
-.blog-contents {
-  > p {
-    font-size: 20px;
-    letter-spacing: 0.6px;
-    line-height: 25px;
   }
 }
