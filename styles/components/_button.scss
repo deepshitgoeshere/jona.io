@@ -1,17 +1,13 @@
 // buttons: fancy buttons!
 
-a > .button {
+.button {
   border: 1px solid black;
   border-radius: 7px;
   padding: 10px;
   margin-bottom: 10px;
   color: black;
 
-  .button-title {
-    font-size: 18px;
-  }
-
-  &.button-red {
+  &.-red {
     border: 1px dashed $red;
     transition: .3s background-color, .3s color;
 
@@ -21,7 +17,7 @@ a > .button {
     }
   }
 
-  &.button-yellow {
+  &.-yellow {
     border: 1px dashed $yellow;
     transition: .3s background-color, .3s color;
 
@@ -31,7 +27,7 @@ a > .button {
     }
   }
 
-  &.button-green {
+  &.-green {
     border: 1px dashed $green;
     transition: .3s background-color, .3s color;
 
@@ -39,5 +35,9 @@ a > .button {
       background-color: $green;
       color: white;
     }
+  }
+
+  > .title {
+    font-size: 18px;
   }
 }
