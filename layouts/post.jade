@@ -11,7 +11,9 @@ block navbar
     include partials/navbar-content.jade
 
 block content
-  h1= title
+  .text.-large= title
+  .text.-grey._lessmargin #{sdate} by #{author}
+  hr
   .text.-medium
     p!= contents
   
