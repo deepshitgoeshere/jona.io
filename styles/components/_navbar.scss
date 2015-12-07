@@ -5,10 +5,9 @@
   margin: 0;
   padding: 10px 0 10px 0;
   border: 0;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  top: 50px;
+  left: 50px;
 
   &.-red {
     background-color: $red;
@@ -64,5 +63,21 @@
     &.-brand {
       font-size: 17px;
     }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .navbar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    position: inherit;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .navbar > .item.-brand {
+    display: none;
   }
 }
