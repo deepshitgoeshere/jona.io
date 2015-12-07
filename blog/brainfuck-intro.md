@@ -14,7 +14,7 @@ Ah yes. Brainfuck. In many ways regarded as the "original esoteric language", it
 -----     -----     -----
   ^
 ```
-Yes, it's simply ==just a bunch of cells==, each of which can hold a decimal value, with an arrow that points to one of those. But enough about that _for now_, let's see how we can install it.
+Yes, it's simply just a bunch of cells, each of which can hold a decimal value, with an arrow that points to one of those. But enough about that _for now_, let's see how we can install it.
 
 ### Installation
 
