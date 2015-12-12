@@ -10,9 +10,14 @@ body {
 
 a {
   text-decoration: none;
+  color: $link;
 
   &:visited {
-    color: blue;
+    color: $link;
+  }
+
+  &:hover {
+    color: darken($link, 20%);
   }
 }
 
