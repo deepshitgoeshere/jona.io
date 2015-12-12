@@ -1,9 +1,5 @@
 extends ../layouts/main.jade
 
-block navbar
-  ul.navbar.-yellow
-    include ../layouts/partials/navbar-content.jade
-    
 block content
   .text.-large projects
   ul.cards
@@ -42,3 +38,5 @@ block content
       li.item
         .title retrospring (discontinued)
         .description devops and javascript
+  .text.-medium
+    a(href='/') back to the index

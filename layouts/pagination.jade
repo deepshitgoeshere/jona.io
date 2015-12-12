@@ -1,14 +1,12 @@
 extends main.jade
 
-block navbar
-  ul.navbar.-green
-    include partials/navbar-content.jade
-
 block content
   .text.-large blog posts
   ul.blog-list
     each page in pagination.files
       li.item
-        .text.-grey= page.sdate
-        |  >> 
+        .text.-grey #{page.sdate}:
+        | 
         a(href='/blog/#{page.short}')= page.title
+  .text.-medium
+    a(href='/') back to the index

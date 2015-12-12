@@ -6,10 +6,6 @@ block styles
 block scripts
   script(src='/js/prism.min.js')
 
-block navbar
-  ul.navbar.-green
-    include partials/navbar-content.jade
-
 block content
   .text.-large= title
   .text.-grey._lessmargin #{sdate} by #{author}
@@ -18,7 +14,6 @@ block content
     p.content!= contents
   
   .whitespace.-small
-  a(href='/blog')
-    .button.-green
-      .title back to the blog
+  .text.-medium
+    a(href='/blog') back to the blog index
   .whitespace.-small
