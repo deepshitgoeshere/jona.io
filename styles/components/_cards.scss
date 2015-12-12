@@ -38,7 +38,7 @@ ul.cards {
   }
 }
 
-@media only screen and (max-width: 1350px) {
+@media all and (max-width: 1350px) {
   ul.cards > a > .item {
     width: 90%;
     max-width: 90%;
