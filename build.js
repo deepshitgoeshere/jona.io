@@ -94,16 +94,7 @@ function dateFormat () {
 }
 
 // Spin up a small Express server that just serves the compiled files as static
-// directory. This is required because of the SSL redirection middleware (which
-// will come later).
+// directory.
 const app = express()
-
 app.use(express.static(path.join(__dirname, 'build')))
-app.use(function forwardToHttps (req, res, next) {
-  if (req.headers['x-forwarded-proto'] === 'http') {
-    return res.redirect(['https://', req.get('Host'), req.url].join(''))
-  }
-  next()
-})
-
 app.listen(process.env['PORT'] || 3030)
