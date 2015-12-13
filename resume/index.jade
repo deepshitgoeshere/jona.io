@@ -28,48 +28,59 @@ block content
       header.section-header
         h2 Experience
       
-      .resume-item
-        h3.resume-item-title Test Experience
-        h4.resume-item-details My position
-        p.resume-item-copy competences
-        ul.resume-item-list
-          li a
-          li list
+      each v in me.experiences
+        .resume-item
+          if v.link
+            h3.resume-item-title #[a(href='#{v.link}')= v.title]
+          else
+            h3.resume-item-title!= v.title
+          h4.resume-item-details!= v.position
+          p.resume-item-copy!= v.description
     
     section.content-section
       header.section-header
         h2 Education
       
-      .resume-item
-        h3.resume-item-title Where I've been
-        h4.resume-item-details AAAAAA
-        p.resume-item-copy Some details
+      each v in me.education
+        .resume-item
+          h3.resume-item-title!= v.title
+          h4.resume-item-details!= v.subject
+          p.resume-item-copy!= v.description
     
     section.content-section
       header.section-header
         h2 Projects
         
-      .resume-item
-        h3.resume-item-title #[a(href='google.com') Google]
-        h4.resume-item-details Position
-        p.resume-item-copy Description
+      each v in me.projects
+        .resume-item
+          if v.link
+            h3.resume-item-title #[a(href='#{v.link}')= v.title]
+          else
+            h3.resume-item-title!= v.title
+          h4.resume-item-details!= v.position
+          p.resume-item-copy!= v.description
     
     section.content-section
       header.section-header
         h2 Skills
       
-      .resume-item
-        h3.resume-item-details SKILL
-        p.resume-item-copy description
+      each v in me.skills
+        .resume-item
+          h3.resume-item-detail= v.title
+          p.resume-item-copy= v.description
     
     section.content-section
       header.section-header
         h2 Associations
       
-      .resume-item
-        h3.resume-item-title Node.sjs
-        h4.resume-item-details Position
-        p.resume-item-copy desc
+      each v in me.associations
+        .resume-item
+          if v.link
+            h3.resume-item-title #[a(href='#{v.link}')= v.title]
+          else
+            h3.resume-item-title!= v.title
+          h4.resume-item-details!= v.position
+          p.resume-item-copy!= v.description
     
     footer.page-footer
       p.footer-line Adapted from the original template made by #[a(href='http://twitter.com/jglovier') Joel Glovier]

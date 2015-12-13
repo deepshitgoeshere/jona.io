@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "node build.js",
-    "dev": "nodemon -e js,jade,scss,md --ignore build/ build.js"
+    "dev": "nodemon -e js,jade,scss,md,yml --ignore build/ build.js"
   },
   "private": true,
   "dependencies": {

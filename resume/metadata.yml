@@ -1,9 +1,56 @@
-name: "Jona Hugger"
-title: "Backend Developer"
-summary: "Hi"
+name: Jona Hugger
+title: Backend Developer
+summary: |
+  I'm constantly looking to improve my skills by working with various teams
+  and languages. I'm not afraid of challenging myself by tackling larger or
+  unknown projects.
 
-email: "jona@jona.io"
+email: jona@jona.io
 
 links:
-  github: "http://github.com/sup"
-  website: "http://jona.io"
+  github: http://github.com/sup
+  website: http://jona.io
+
+experiences:
+  -
+    link: http://retrospring.net
+    title: Retrospring
+    position: Javascript developer &bull; Sep 2015 &mdash; Jun 2016
+    description: |
+      I maintain the Javascript in the codebase and also do social media
+      monitoring.
+
+education:
+  -
+    title: Städisches Gymnasium Leichlingen
+    subject: IT & English &bull; Sep 2008 &mdash; Jun 2016
+    description: |
+      I once handed in an IT exam after 1.5 out of 4 hours of time, and got an
+      A+ for it. I'm THAT good.
+
+projects:
+  -
+    link: http://retrospring.net
+    title: Retrospring
+    position: Javascript Developer &bull; Sep 2015 &mdash; Jun 2016
+    description: |
+      I take care of the client-side Javascript used in the rewrite of the
+      software behind Retrospring, which is written in Coffeescript.
+
+skills:
+  -
+    title: Node.js
+    description: |
+      I've worked with Node.js for about four years now and have explored the
+      different styles of structuring code as well as experimenting with a lot
+      of other libraries.
+
+associations:
+  -
+    link: http://nodejs.org
+    title: Node.js
+    position: Volunteer &bull; Sep 2015 &mdash; present
+    description: |
+      As a volunteer and individual member of the Node.js foundation, I manage
+      the Node.js website and parttake in the Inclusivity Working Group, which
+      seeks to increase diversity in the Node.js community.
