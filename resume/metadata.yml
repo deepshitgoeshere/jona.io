@@ -18,17 +18,51 @@ experiences:
     position: Javascript developer &bull; Sep 2015 &mdash; Jun 2016
     description: |
       I maintain the Javascript in the codebase and also do social media
-      monitoring.
+      monitoring. Retrospring is going to cease development in June 2016.
+  -
+    link: http://crr.io
+    title: crrio
+    position: Developer &bull; Aug 2015 &mdash; present
+    description: |
+      I founded PUSHCYCLE, a team that was eventually acquired by crrio.
+      PUSHCYCLE is responsible for noodlesoup, a fully-featured blogging
+      platform written in Meteor, and various other small projects. crrio is a
+      company that creates services for gamers and has had over 10 million
+      visitors to its websites.
+  -
+    title: Leafcat
+    position: Developer &bull; Jul 2014 &mdash; Dec 2014
+    description: |
+      I was one of the first members of the team and contributed to various
+      projects. I created a CLI for creating UX personas, and a large part of
+      the team's website. Unfortunately, the team got disbanded due to lack of
+      interest from founding members.
 
 education:
   -
     title: Städisches Gymnasium Leichlingen
     subject: IT & English &bull; Sep 2008 &mdash; Jun 2016
     description: |
-      I once handed in an IT exam after 1.5 out of 4 hours of time, and got an
-      A+ for it. I'm THAT good.
+      I'm planning to do my Abitur, after which I will leave the school in 2016.
+      My main courses are IT and English.
 
 projects:
+  -
+    link: http://info.soda.coffee
+    title: marblesoda
+    position: Co-creator and developer &bull; May 2015 &mdash; present
+    description: |
+      marblesoda is a Twitter clone built out of frustration with Twitter's
+      community and (lack of) features. It is invite-only, and currently under
+      development.
+  -
+    link: http://windingkey.co
+    title: Wind Up
+    position: Head Developer &bull; Oct 2015 &mdash; present
+    description: |
+      Wind Up is a liveblogging platform that allows users to create feeds
+      pertaining to an event or an episode of a series. These feeds can be
+      updated live. I wrote the entire backend using the Meteor framework.
   -
     link: http://retrospring.net
     title: Retrospring
@@ -36,6 +70,13 @@ projects:
     description: |
       I take care of the client-side Javascript used in the rewrite of the
       software behind Retrospring, which is written in Coffeescript.
+  -
+    link: http://github.com/PUSHCYCLE/noodlesoup
+    title: Noodlesoup
+    position: Head Developer &bull; Jul 2015 &mdash; Sep 2015
+    description: |
+      Noodlesoup was a blogging platform for japanese entertainment. I developed
+      almost all parts of the site by myself, using the Meteor framework.
 
 skills:
   -
@@ -44,6 +85,20 @@ skills:
       I've worked with Node.js for about four years now and have explored the
       different styles of structuring code as well as experimenting with a lot
       of other libraries.
+  -
+    title: Meteor
+    description: |
+      I've used Meteor to build two production sites and made several packages
+      for the ecosystem.
+  -
+    title: Ruby
+    description: |
+      I've made a couple of apps using the Sinatra framework, but also CLIs and
+      API wrappers.
+  -
+    title: Elixir
+    description: |
+      Elixir is the language I am currently learning.
 
 associations:
   -
