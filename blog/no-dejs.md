@@ -1,6 +1,6 @@
 ---
 title: No-de.js
-short: no_dejs
+short: no-dejs
 date: 2015-12-13
 description: Moving away from Node and Ruby.
 author: jona
