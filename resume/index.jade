@@ -9,12 +9,15 @@ block styles
 block content
   .wrapper
     header.page-header
-      img(src='img/me.png' alt='me').avatar
+      img(src='http://i.imgur.com/WJwz07G.jpg' alt='me').avatar
       
       h1.header-name= me.name
       .title-bar
         h2.header-title= me.title
-        //- icon links here (later)
+        
+        ul.icon-links
+          include ../layouts/partials/icon-github.jade
+          include ../layouts/partials/icon-website.jade
       
       .executive-summary
         p= me.summary
@@ -67,4 +70,6 @@ block content
         h3.resume-item-title Node.sjs
         h4.resume-item-details Position
         p.resume-item-copy desc
-        
+    
+    footer.page-footer
+      p.footer-line Adapted from the original template made by #[a(href='http://twitter.com/jglovier') Joel Glovier]
