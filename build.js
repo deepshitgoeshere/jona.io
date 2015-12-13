@@ -6,6 +6,7 @@ const Collections = require('metalsmith-collections')
 const Markdown = require('metalsmith-markdown')
 const Layouts = require('metalsmith-layouts')
 const Pagination = require('metalsmith-pagination')
+const Metadata = require('metalsmith-metadata')
 
 const express = require('express')
 const moment = require('moment')
@@ -57,6 +58,20 @@ const blog = Metalsmith(path.join(__dirname, 'blog'))
   }))
   .use(Permalinks({
     pattern: ':short'
+  }))
+  .build(err => {
+    if (err) { throw new Error(err) }
+  })
+
+const resume = Metalsmith(path.join(__dirname, 'resume'))
+  .source('./')
+  .destination('../build/resume')
+  .use(Metadata({
+    me: 'metadata.yml'
+  }))
+  .use(Jade({
+    pretty: true,
+    useMetadata: true
   }))
   .build(err => {
     if (err) { throw new Error(err) }

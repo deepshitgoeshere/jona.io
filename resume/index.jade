@@ -1,0 +1,70 @@
+extends ../layouts/main.jade
+
+block title
+  title resume - jona
+
+block styles
+  link(rel='stylesheet' href='/css/resume/main.css')
+
+block content
+  .wrapper
+    header.page-header
+      img(src='img/me.png' alt='me').avatar
+      
+      h1.header-name= me.name
+      .title-bar
+        h2.header-title= me.title
+        //- icon links here (later)
+      
+      .executive-summary
+        p= me.summary
+        
+      a(href='mailto:#{me.email}').contact-button Contact me
+    
+    section.content-section
+      header.section-header
+        h2 Experience
+      
+      .resume-item
+        h3.resume-item-title Test Experience
+        h4.resume-item-details My position
+        p.resume-item-copy competences
+        ul.resume-item-list
+          li a
+          li list
+    
+    section.content-section
+      header.section-header
+        h2 Education
+      
+      .resume-item
+        h3.resume-item-title Where I've been
+        h4.resume-item-details AAAAAA
+        p.resume-item-copy Some details
+    
+    section.content-section
+      header.section-header
+        h2 Projects
+        
+      .resume-item
+        h3.resume-item-title #[a(href='google.com') Google]
+        h4.resume-item-details Position
+        p.resume-item-copy Description
+    
+    section.content-section
+      header.section-header
+        h2 Skills
+      
+      .resume-item
+        h3.resume-item-details SKILL
+        p.resume-item-copy description
+    
+    section.content-section
+      header.section-header
+        h2 Associations
+      
+      .resume-item
+        h3.resume-item-title Node.sjs
+        h4.resume-item-details Position
+        p.resume-item-copy desc
+        
