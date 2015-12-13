@@ -26,7 +26,7 @@ experiences:
     description: |
       I founded PUSHCYCLE, a team that was eventually acquired by crrio.
       PUSHCYCLE is responsible for noodlesoup, a fully-featured blogging
-      platform written in Meteor, and various other small projects. crrio is a
+      platform written in Meteor, and various other smaller projects. crrio is a
       company that creates services for gamers and has had over 10 million
       visitors to its websites.
   -
@@ -106,6 +106,6 @@ associations:
     title: Node.js
     position: Volunteer &bull; Sep 2015 &mdash; present
     description: |
-      As a volunteer and individual member of the Node.js foundation, I manage
-      the Node.js website and parttake in the Inclusivity Working Group, which
-      seeks to increase diversity in the Node.js community.
+      As a volunteer and individual member of the Node.js foundation, I help
+      managethe Node.js website and parttake in the Inclusivity Working Group,
+      which seeks to increase diversity in the Node.js community.
