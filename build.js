@@ -102,7 +102,14 @@ const javascripts = Metalsmith(path.join(__dirname, 'javascripts'))
 function dateFormat () {
   return (files, metalsmith, done) => {
     files['index.html'].pagination.files.forEach(c => {
-      c.sdate = moment(moment()).diff(c.date, 'days') + ' days ago'
+      var temp = moment(moment()).diff(c.date, 'days')
+      if (temp === 0) {
+        c.sdate = 'today'
+      } else if (temp === 1) {
+        c.sdate = '1 day ago'
+      } else {
+        c.sdate = temp + ' days ago'
+      }
     })
     done()
   }
