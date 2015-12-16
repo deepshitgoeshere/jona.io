@@ -48,7 +48,7 @@ education:
 
 projects:
   -
-    link: http://info.soda.coffee
+    link: http://github.com/marblesoda/marble
     title: marblesoda
     position: Co-creator and developer &bull; May 2015 &mdash; present
     description: |
@@ -64,7 +64,7 @@ projects:
       pertaining to an event or an episode of a series. These feeds can be
       updated live. I wrote the entire backend using the Meteor framework.
   -
-    link: http://retrospring.net
+    link: http://github.com/Retrospring/retrospring
     title: Retrospring
     position: Javascript Developer &bull; Sep 2015 &mdash; Jun 2016
     description: |
