@@ -1,5 +1,5 @@
 ---
-title: A tiny introduction to Brainfuck
+title: a tiny introduction to brainfuck
 short: brainfuck-intro
 date: 2015-10-10
 description: good

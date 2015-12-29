@@ -1,5 +1,5 @@
 ---
-title: How to create an invite-based login system in Meteor
+title: how to create an invite-based login system in meteor
 short: meteor-invitesystem
 date: 2015-10-27
 description: It's easy, really!

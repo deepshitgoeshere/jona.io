@@ -1,5 +1,5 @@
 ---
-title: No-de.js
+title: no-de.js
 short: no-dejs
 date: 2015-12-13
 description: Moving away from Node and Ruby.
