@@ -8,7 +8,7 @@ author: jona
 
 In your heart, you know it's true. There's no such thing as a _good_ or even _best_ language.
 
-Some might want to punch their computers and scream: _"Blasphemy! Everyone knows that [LANGUAGE X] is the best! It has [FEATURES Y AND Z]!"_. Doesn't this sound awfully familiar to you? I'm sure you've heard that similar, if not exact, phrasing shout out by some random guy on the internet in response to you claiming that [LANGUAGE X] isn't actually as good as everyone says.
+Some might want to punch their computers and scream: _"Blasphemy! Everyone knows that [LANGUAGE X] is the best! It has [FEATURES Y AND Z]!"_. Doesn't this sound awfully familiar to you? I'm sure you've heard that similar, if not exact, phrasing shout out by some random person on the internet in response to you claiming that [LANGUAGE X] isn't actually as good as everyone says.
 
 There's really no good way to talk around this, but every language is usually focused on a different __paradigm__. Examples of paradigms include object-oriented (which Java and Ruby are quite good at), imperative programming (first employed by the VERY early languages such as B or even Speedcoding) or, the latest craze, functional programming (the most notable example being Haskell, which is dubbed my many as _"the new Javascript"_ already).
 
