@@ -7,6 +7,7 @@ const Markdown = require('metalsmith-markdown')
 const Layouts = require('metalsmith-layouts')
 const Pagination = require('metalsmith-pagination')
 const Metadata = require('metalsmith-metadata')
+const Drafts = require('metalsmith-drafts')
 
 const express = require('express')
 const moment = require('moment')
@@ -34,6 +35,7 @@ const main = Metalsmith(path.join(__dirname, 'main'))
 const blog = Metalsmith(path.join(__dirname, 'blog'))
   .source('./')
   .destination('../build/blog')
+  .use(Drafts())
   .use(Collections({
     posts: {
       pattern: '*.md',
