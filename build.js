@@ -98,6 +98,14 @@ const javascripts = Metalsmith(path.join(__dirname, 'javascripts'))
     if (err) { throw new Error(err) }
   })
 
+// Another one, this time for static content like images.
+const statics = Metalsmith(path.join(__dirname, 'public'))
+  .source('./')
+  .destination('../build')
+  .build(err => {
+    if (err) { throw new Error(err) }
+  })
+
 // This Metalsmith middleware adds an attribute to every file in a pagination
 // that specifies how many days ago it was created. It uses moment.js and the
 // `date` metadata.
