@@ -1,0 +1,28 @@
+.flat-list {
+  display: block;
+
+  > .item {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 25px;
+
+    &:after {
+      content: ' //';
+      font-family: serif;
+    }
+
+    &:last-child:after {
+      content: '';
+    }
+  }
+
+  &.-no {
+    > .item {
+      margin-right: 10px;
+
+      &:after {
+        content: '';
+      }
+    }
+  }
+}

@@ -1,35 +1,18 @@
 extends ../layouts/main.jade
 
+block styles
+  link(rel='stylesheet' href='https://brick.a.ssl.fastly.net/Charter:400')
+  link(rel='stylesheet' href='/css/main.css')
+  link(rel='stylesheet' href='/css/index.css')
+
 block content
-  .text.-large hi, i'm jona.
-  .text.-medium.
-    i do work for <a href='http://crr.io'>crrio</a> and <a href='http://github.com/pushcycle'>PUSHCYCLE</a>, but i also work on a lot of other
-    open-source and general internet-y stuff. you can find a list of projects i work on on <a href='/projects'>this page</a>.
-    my pronouns are he/him/his.
-  br
-  .text.-medium.
-    i am a member of the <a href='https://nodejs.org/en/foundation'>node.js foundation</a>, and frequently
-    contribute to the node.js website. also, i'm in the project's <a href='https://github.com/nodejs/inclusivity'>
-    inclusivity working group</a>.
-  br
-  .text.-medium 
-    | you can find me on social media:
-    ul
-      li.
-        on GitHub: <a href='http://github.com/sup'>sup</a>
-      li.
-        on Retrospring: <a href='http://retrospring.net/jona'>jona</a>
-      li.
-        on Keybase: <a href='http://keybase.io/j3'>j3</a>
-    | if you're on something not listed here, odds are i might be there under jona or jonahugger.
-  br
-  .text.-medium.
-    i also have a <a href='/blog'>blog</a>. i write posts on it, and as though i do so infrequently, maybe they might be of use to you. i mostly
-    write small tutorials on there for javascript, node.js, meteor or anything else i find interest in.
-  br
-  .text.-medium.
-    this page is statically generated using a <a href='http://metalsmith.io'>metalsmith</a> build script. if you're interested in
-    knowing more about the build process, you can have a look at the site's <a href='http://github.com/sup/jona.io'>github repository</a>.
-  br
-  .text.-medium.
-    (if you're interested in knowing more about ME, have a look at my professional <a href='/resume'>resume</a>)
+  .text.-large jona
+  .flat-list
+    .item nodejs collaborator
+    .item drum player
+    .item he/him/his
+  .flat-list.-no
+    a.item(href='http://github.com/sup') github
+    a.item(href='http://twitter.com/jonaisneat') twitter
+    a.item(href='/projects') projects
+    a.item(href='/blog') blog
