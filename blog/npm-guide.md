@@ -54,7 +54,9 @@ Now that we've got that down, let's do this package install thing! First off, ma
 
 ![nice](https://u.teknik.io/ItT633.png)
 
-If you're too lazy to create this manually (like me), just use `npm init`. It walks you through creating a package.json with all of the most important parts.
+(If you want a complete sheet of acceptable fields, consult [this document][5].)
+
+If you're too lazy to create this manually (like me), just use `npm init`. It walks you through creating a `package.json` with all of the most important parts.
 
 #### Your first package install
 
@@ -92,7 +94,7 @@ npm install --save-dev winston
 
 #### Global installs
 
-There's some cool CLI's (read: **c**ommand-**l**ine **i**nterfaces) out there, and wow! - some are written with Node.js. Most of them are available as an NPM package, and here's how to install one:
+There's some cool CLIs (read: **c**ommand-**l**ine **i**nterfaces) out there, and wow! - some are written with Node.js. Most of them are available as an NPM package, and here's how to install one:
 
 ```sh
 npm install -g figlet-cli
@@ -107,7 +109,7 @@ The `-g` flag installs it in the `~/.npm` folder and symlinks it into `/usr/loca
 
 Now, imagine you have your styles written in Sass/SCSS. How do you compile it into normal CSS? Some people would tell you to install Gulp and `gulp-sass`, but then you'd need a `Gulpfile` and you'd need to learn Gulp's syntax and piping and-- wait, there's an easier way?
 
-*Re-introducing NPM.* Have you noticed the `scripts` field in your package.json? All it does is run commands. But because it runs commands, it's so much more powerful than build tools like Gulp will ever be. Ever ask yourself why UNIX geeks love shell scripts so much? That's the reason.
+*Re-introducing NPM.* Have you noticed the `scripts` field in your `package.json`? All it does is run commands. But because it runs commands, it's so much more powerful than build tools like Gulp will ever be. Ever ask yourself why UNIX geeks love shell scripts so much? That's the reason.
 
 So, what you can do is install some kind of Sass binary (I recommend `gem install sass`, `node-sass` breaks WAY too often) and write this in your `scripts` field:
 
@@ -159,3 +161,4 @@ You can use `npm i` instead of `npm install` and `npm i -S` instead of `npm inst
 [2]: http://docs.npmjs.com
 [3]: http://twitter.com/ag_dubs
 [4]: http://twitter.com/jonaisneat
+[5]: https://docs.npmjs.com/files/package.json
