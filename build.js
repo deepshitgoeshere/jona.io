@@ -45,7 +45,7 @@ const blog = Metalsmith(path.join(__dirname, 'blog'))
   }))
   .use(Pagination({
     'collections.posts': {
-      perPage: 4,
+      perPage: 100,
       layout: 'pagination.jade',
       first: 'index.html',
       path: 'index.html'
