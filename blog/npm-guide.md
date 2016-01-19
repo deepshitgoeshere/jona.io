@@ -33,9 +33,9 @@ Now that we've got that down, let's do this package install thing! First off, ma
 
 ```json
 {
-  "name": "cool-package",
+  "name": "cool-project",
   "version": "0.1.0",
-  "description": "a very nice package",
+  "description": "a very nice project",
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
@@ -43,7 +43,7 @@ Now that we've got that down, let's do this package install thing! First off, ma
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sup/nice.git"
+    "url": "git+https://github.com/sup/cool-project.git"
   },
   "author": "jona <jona@jona.io> (http://jona.io/)",
   "license": "MIT"
