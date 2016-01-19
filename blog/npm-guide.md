@@ -4,7 +4,6 @@ short: npm-guide
 date: 2016-01-19
 description: read this
 author: jona
-draft: true
 ---
 
 So, NPM. You're likely to have heard about it. It's The Next Big Thing in the field of package managers, as described by many. Actually though, it's already the Big Thing, since it holds the most number of packages out of any other package manager, 228,616 (at time of writing). By comparison, Maven Central (the second biggest package repository) 'only' has 129,780. That's still a lot, but NPM has almost twice as much.
