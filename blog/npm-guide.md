@@ -150,7 +150,7 @@ But NPM does that for you! How awesome is that! *But*, you may ask, why do you n
 
 I really hope this post taught you some stuff about NPM you didn't know before! Of course, there's still lots of things uncleared. The [NPM docs][2] are a great starting point for those. (Shoutouts to [ashley williams][3] for putting so much effort into them)
 
-If you want to scream at me for unknown reasons, you can find me [on Twitter]. Bye!
+If you want to scream at me for unknown reasons, you can find me [on Twitter][4]. Bye!
 
 ###### _Addendum 1: Shortcuts_
 
