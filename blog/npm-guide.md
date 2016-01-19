@@ -11,6 +11,14 @@ So, NPM. You're likely to have heard about it. It's The Next Big Thing in the fi
 
 So, now that we've established that, how do we get going with it? If you have Node.js/io.js installed, *you already have NPM*. That is, unless you use a really old version, like pre-0.8. But why would anyone do that. Like, don't do that.
 
+#### Contents
+
+  - [What you need to know](#what-you-need-to-know)
+  - [Your first package.json](#your-first-packagejson)
+  - [Your first package install](#your-first-package-install)
+  - [Global installs](#global-installs)
+  - [Building with NPM](#building-with-npm)
+
 #### What you need to know
 
 There's some pretty important concepts about NPM that you *need* to understand before moving on:
@@ -19,7 +27,7 @@ There's some pretty important concepts about NPM that you *need* to understand b
   2. NPM is a package manager, yes, but (but!) it's also a build tool! Stop using Gulp, Grunt, Brunch, Branch, Toilet, Housing Appliance, or whatever the next build tool is going to be named, NPM is here to bring you some serious competition, out of the box. (We'll get to that later, though)
   3. NPM, by default, downloads from http://npmjs.com, which is the central repository for packages. You can, though, set up your own repository if you're enterprise enough. Yes, that means that is costs.
 
-### Your first package.json
+#### Your first package.json
 
 Now that we've got that down, let's do this package install thing! First off, make sure you've got a `package.json`. That's sort of like a `Gemfile`, but more like a `pom.xml` (from Maven). It holds info about your package dependencies, but also general info about your project. Here's what it roughly looks like:
 
@@ -48,7 +56,7 @@ Now that we've got that down, let's do this package install thing! First off, ma
 
 If you're too lazy to create this manually (like me), just use `npm init`. It walks you through creating a package.json with all of the most important parts.
 
-### Your first package
+#### Your first package install
 
 Let's talk more about `dependencies`. Imagine we'd install [moment.js][1] with the following command:
 
@@ -82,9 +90,9 @@ npm install --save-dev winston
 
 `devDependencies` are often build tools like Gulp or debuggers like winston.
 
-### Globalization
+#### Global installs
 
-There's some cool CLI's (read: **c**ommand-**l**ine **i**nterfaces) out there, and wow! - some are written with Node.js. Most of them are available as NPM package, and here's how to install one:
+There's some cool CLI's (read: **c**ommand-**l**ine **i**nterfaces) out there, and wow! - some are written with Node.js. Most of them are available as an NPM package, and here's how to install one:
 
 ```sh
 npm install -g figlet-cli
@@ -95,7 +103,7 @@ figlet -f "Dancing Font" "hello"
 
 The `-g` flag installs it in the `~/.npm` folder and symlinks it into `/usr/local/bin`, from which you can execute it.
 
-### Building with NPM
+#### Building with NPM
 
 Now, imagine you have your styles written in Sass/SCSS. How do you compile it into normal CSS? Some people would tell you to install Gulp and `gulp-sass`, but then you'd need a `Gulpfile` and you'd need to learn Gulp's syntax and piping and-- wait, there's an easier way?
 
@@ -119,7 +127,7 @@ Another cool thing you can do is define a start script like this:
 }
 ```
 
-For the `start` and `test` fields, running `npm start / npm test` is enough. No `npm run` syntax there.
+For the `start` and `test` fields, running `npm start` / `npm test` is enough. No `npm run` syntax there.
 
 The *third* cool thing is this: If you have a local dependency that has a binary it exposes (like nodemon does, for example), you can refer to that very easily in NPM scripts:
 
@@ -137,13 +145,13 @@ The *third* cool thing is this: If you have a local dependency that has a binary
 }
 ```
 
-But NPM does that for you! How awesome is that! But, you may ask, why do you need a local dependency of nodemon when you can just install it globally? It's so that people getting into your project don't have to run a `npm install -g package_1 package_2 ...` explicitly, but can just run `npm install` and have it handled for them. And since only the NPM scripts use those scripts, it doesn't clog up the global command namespace as well.
+But NPM does that for you! How awesome is that! *But*, you may ask, why do you need a local dependency of nodemon when you can just install it globally? It's so that people getting into your project don't have to run a `npm install -g package_1 package_2 ...` explicitly, but can just run `npm install` and have it handled for them. And since only the NPM scripts use those scripts, it doesn't clog up the global command namespace as well.
 
 I really hope this post taught you some stuff about NPM you didn't know before! Of course, there's still lots of things uncleared. The [NPM docs][2] are a great starting point for those. (Shoutouts to [ashley williams][3] for putting so much effort into them)
 
 If you want to scream at me for unknown reasons, you can find me [on Twitter]. Bye!
- 
-_Addendum 1: Shortcuts_
+
+###### _Addendum 1: Shortcuts_
 
 You can use `npm i` instead of `npm install` and `npm i -S` instead of `npm install --save`. Same with `npm i -D` instead of `npm install --save-dev`.
 
