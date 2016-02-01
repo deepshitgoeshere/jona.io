@@ -1,7 +1,6 @@
 // typography: font stuff
 
 .text {
-  display: block;
   line-height: 30px;
 
   &.-large,
@@ -16,6 +15,10 @@
 
   &.-medium {
     font-size: 20px;
+  }
+
+  &.-what {
+    font-size: 25px;
   }
 
   &.-large {

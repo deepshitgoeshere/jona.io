@@ -1,13 +1,11 @@
 .flat-list {
-  display: block;
-
   > .item {
     display: inline-block;
     margin-right: 5px;
     font-size: 25px;
 
     &:after {
-      content: ' //';
+      content: ' and';
       font-family: serif;
     }
 
@@ -17,6 +15,8 @@
   }
 
   &.-no {
+    margin-left: 10px;
+
     > .item {
       margin-right: 10px;
 
