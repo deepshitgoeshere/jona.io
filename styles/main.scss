@@ -1,9 +1,5 @@
-@import 'vars';
 @import 'global';
-@import 'helpers';
 
-@import 'components/text';
-@import 'components/cards';
-@import 'components/blog';
-@import 'components/whitespace';
-@import 'components/flat-list';
+@import 'text';
+@import 'list';
+@import 'cards';

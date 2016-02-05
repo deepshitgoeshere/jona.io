@@ -1,0 +1,9 @@
+.text {
+  line-height: 30px;
+  font-size: 25px;
+
+  &.large {
+    font-size: 30px;
+    font-weight: 700;
+  }
+}

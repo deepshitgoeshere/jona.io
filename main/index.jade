@@ -3,21 +3,41 @@ extends ../layouts/main.jade
 block styles
   link(rel='stylesheet' href='https://brick.a.ssl.fastly.net/Charter:400')
   link(rel='stylesheet' href='/css/main.css')
-  link(rel='stylesheet' href='/css/index.css')
 
 block content
-  span.text.-large jona
-  span.flat-list.-no
+  span.text.large jona
+  span.list
     a.item(href='http://github.com/sup') github
     a.item(href='http://twitter.com/arrowfunction') twitter
-    a.item(href='/projects') projects
-    a.item(href='/blog') blog
+    
   br
   br
-  span.text.-what i do
-  span.flat-list
+  span.text i do
+  span.list.and
     .item elixir
     .item erlang
     .item javascript
     .item clojure
     .item {c,e}lisp
+
+  .cards
+    a(href='http://github.com/sup/nice')
+      .item
+        .title nice
+        .description a twitter clone in meteor
+    a(href='http://github.com/sup/meld')
+      .item
+        .title meld
+        .description create binaries from mix tasks
+    a(href='http://github.com/sup/jona.io')
+      .item
+        .title jona.io
+        .description yes, this site
+    a(href='http://github.com/retrospring/nsc')
+      .item
+        .title nsc
+        .description angular style commit generator
+    a(href='http://github.com/ix/noodlesoup')
+      .item
+        .title noodlesoup
+        .description an anime blogging engine

@@ -1,23 +1,21 @@
-// global: stuff that doesn't fit anywhere else
-
 body {
   margin: 0;
   padding: 0;
   border: 0;
-
   font-family: 'Charter', serif;
+  background-color: #f6f6f6;
 }
 
 a {
   text-decoration: none;
-  color: $link;
+  color: #4467F6;
 
   &:visited {
-    color: $link;
+    color: #4467F6;
   }
 
   &:hover {
-    color: darken($link, 20%);
+    color: #1134C3;
   }
 }
 
@@ -26,14 +24,8 @@ hr {
   border-bottom: 1px lightgray solid;
 }
 
-img {
-  max-width: 100%;
-}
-
 .container {
-  margin-left: 22%;
-  margin-right: 22%;
-  margin-top: 30px;
+  margin: 100px 22% 0 22%;
 }
 
 @media all and (max-width: 1000px) {
