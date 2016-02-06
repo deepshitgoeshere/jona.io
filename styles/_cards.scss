@@ -3,7 +3,20 @@
   margin: 40px 0;
   padding: 0;
 
-  & > a > .item {
+  &.negative {
+    > a > .item {
+      border: 1px #f6f6f6 solid;
+      background: black;
+      color: white;
+
+      &:hover {
+        background: #f6f6f6;
+        color: black;
+      }
+    }
+  }
+
+  > a > .item {
     color: black;
     display: inline-block;
     border: 1px black dashed;
@@ -18,14 +31,14 @@
       background: black;
     }
 
-    & > .title {
+    > .title {
       display: inline-block;
       font-style: italic;
       font-size: 20px;
       margin-right: 10px;
     }
 
-    & > .description {
+    > .description {
       display: inline-block;
       color: gray;
     }
