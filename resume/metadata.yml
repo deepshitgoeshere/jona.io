@@ -1,9 +1,8 @@
 name: Jona Hugger
 title: Backend Developer
 summary: |
-  I am a website engineer from western Germany who is constantly looking to
-  improve my skills by working with various teams and languages. I'm not
-  afraid of challenging myself by tackling larger or unknown projects.
+  I'm a website backend developer who codes for fun and the heck of it. I like
+  new technologies, automatic workflows and functional programming.
 
 email: jona@jona.io
 
@@ -21,7 +20,7 @@ experiences:
       monitoring. Retrospring is going to cease development in June 2016.
   -
     link: http://crr.io
-    title: crrio
+    title: crrio Inc.
     position: Developer &bull; Aug 2015 &mdash; present
     description: |
       I founded PUSHCYCLE, a team that was eventually acquired by crrio.
@@ -48,13 +47,22 @@ education:
 
 projects:
   -
-    link: http://github.com/marblesoda/marble
-    title: marblesoda
-    position: Co-creator and developer &bull; May 2015 &mdash; present
+    link: http://github.com/stellate/stellate
+    title: Stellate
+    position: Co-creator & Developer &bull; Jan 2016 &mdash; present
     description: |
-      marblesoda is a Twitter clone built out of frustration with Twitter's
-      community and (lack of) features. It is invite-only, and currently under
-      development.
+      Stellate is a full-featured Twitter clone with an emphasis on user
+      happiness. I'm working on almost all parts of the site, including the
+      Rails codebase, the clientside CoffeeScript, and the development workflow
+      automation.
+  -
+    link: http://github.com/sup/nice
+    title: nice
+    position: Creator
+    description: |
+      nice was a small Twitter clone that I built for fun. It has basic features
+      , but actually works and was in private alpha for some time. I've ceased
+      development on it.
   -
     link: http://windingkey.co
     title: Wind Up
@@ -71,7 +79,7 @@ projects:
       I take care of the client-side Javascript used in the rewrite of the
       software behind Retrospring, which is written in Coffeescript.
   -
-    link: http://github.com/PUSHCYCLE/noodlesoup
+    link: http://github.com/sup/noodlesoup
     title: Noodlesoup
     position: Head Developer &bull; Jul 2015 &mdash; Sep 2015
     description: |
@@ -98,7 +106,7 @@ skills:
   -
     title: Elixir
     description: |
-      Elixir is the language I am currently learning.
+      I've made a binary script wrapper for Elixir Mix tasks.
 
 associations:
   -
