@@ -1,13 +1,13 @@
 name: Jona Hugger
-title: Backend Developer
+title: Web Citizen
 summary: |
-  I'm a website backend developer who codes for fun and the heck of it. I like
+  I'm a website developer who codes for fun and the heck of it. I like
   new technologies, automatic workflows and functional programming.
 
 email: jona@jona.io
 
 links:
-  github: http://github.com/sup
+  github: http://github.com/hg
   website: http://jona.io
 
 experiences:
@@ -47,7 +47,14 @@ education:
 
 projects:
   -
-    link: http://github.com/stellate/stellate
+    link: http://github.com/xcxsite/xcx
+    title: xcx
+    position: Creator &bull; Feb 2016 &mdash; present
+    description: |
+      xcx is a fan database for the 2015 Wii U game Xenoblade Chronicles X. The
+      site is written entirely in Clojure and SCSS.
+  -
+    link: http://stellate.cc
     title: Stellate
     position: Co-creator & Developer &bull; Jan 2016 &mdash; present
     description: |
@@ -56,7 +63,7 @@ projects:
       Rails codebase, the clientside CoffeeScript, and the development workflow
       automation.
   -
-    link: http://github.com/sup/nice
+    link: http://github.com/hg/nice
     title: nice
     position: Creator
     description: |
@@ -64,7 +71,7 @@ projects:
       , but actually works and was in private alpha for some time. I've ceased
       development on it.
   -
-    link: http://windingkey.co
+    link: http://github.com/gatchannel/windup
     title: Wind Up
     position: Head Developer &bull; Oct 2015 &mdash; present
     description: |
@@ -79,7 +86,7 @@ projects:
       I take care of the client-side Javascript used in the rewrite of the
       software behind Retrospring, which is written in Coffeescript.
   -
-    link: http://github.com/sup/noodlesoup
+    link: http://github.com/hg/noodlesoup
     title: Noodlesoup
     position: Head Developer &bull; Jul 2015 &mdash; Sep 2015
     description: |
@@ -107,6 +114,10 @@ skills:
     title: Elixir
     description: |
       I've made a binary script wrapper for Elixir Mix tasks.
+  -
+    title: Clojure
+    description: |
+      I've created a website using Compojure and a file-based database.
 
 associations:
   -
