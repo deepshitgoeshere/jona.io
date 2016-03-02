@@ -47,6 +47,14 @@ const styles = Metalsmith(path.join(__dirname, 'styles'))
     if (err) { throw new Error(err) }
   })
 
+// Same with javascript. Separate build pipeline.
+const javascripts = Metalsmith(path.join(__dirname, 'javascripts'))
+  .source('./')
+  .destination('../build/js')
+  .build(err => {
+    if (err) { throw new Error(err) }
+  })
+
 // Spin up a small Express server that just serves the compiled files as static
 // directory.
 const app = express()
