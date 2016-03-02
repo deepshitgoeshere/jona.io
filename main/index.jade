@@ -4,61 +4,11 @@ block styles
   link(rel='stylesheet' href='https://brick.a.ssl.fastly.net/Charter:400')
   link(rel='stylesheet' href='/css/main.css')
 
+block scripts
+  script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js')
+  script(type='text/javascript' src='js/index.js')
+
 block content
-  span.text.large hi i'm jona
-    
-  br
-  br
-  .text.
-    I'm a developer based in <a href='https://en.wikipedia.org/wiki/Solingen'>Solingen</a>
-    (that's in Germany). It's pretty neat
-    here, especially because it's not too warm. I'm not a fan of things being 
-    too warm.<br><br>
-    You can find me 
-    <a href='http://github.com/hg'>on GitHub</a> and 
-    <a href='http://twitter.com/arrowfunction'>on Twitter</a> (although I don't
-    really go there anymore). If you want to chat, contact me
-    <a href='http://telegram.me/recursive'>on Telegram</a>.<br><br>
-    I'm currently 'working' for <a href='http://crr.io'>crrio</a> while I'm
-    going towards getting my 
-    <a href='https://en.wikipedia.org/wiki/Abitur'>Abitur</a>.
-    I've also done some other things, most of which are listed here:
-  .cards
-    a(href='http://github.com/hg/hge')
-      .item
-        .title hge
-        .description small language to create http servers
-    a(href='http://github.com/hg/nice')
-      .item
-        .title nice
-        .description a twitter clone in meteor
-    a(href='http://github.com/sup/meld')
-      .item
-        .title meld
-        .description create binaries from mix tasks
-    a(href='http://github.com/hg/jona.io')
-      .item
-        .title jona.io
-        .description yes, this site
-    a(href='http://github.com/retrospring/nsc')
-      .item
-        .title nsc
-        .description angular style commit generator
-    a(href='http://github.com/hg/noodlesoup')
-      .item
-        .title noodlesoup
-        .description an anime blogging engine
-  .text I've also volunteered for some other projects:
-  .cards.negative
-    a(href='http://github.com/nodejs')
-      .item
-        .title node.js
-        .description inclusivity WG member
-    a(href='http://github.com/Retrospring')
-      .item
-        .title retrospring
-        .description core contributor
-    a(href='http://nightb.ug')
-      .item
-        .title nightbug
-        .description founding member
+  .center
+    .message-history
+    textarea.prompt(autofocus rows='2')

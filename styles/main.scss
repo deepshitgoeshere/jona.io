@@ -1,5 +1,51 @@
-@import 'global';
+body {
+  background: #111;
+  color: green;
+  font-family: monospace;
+  overflow: hidden;
+}
 
-@import 'text';
-@import 'list';
-@import 'cards';
+.center {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 30%;
+
+  .message-history {
+    border: 1px solid green;
+    height: 400px;
+    overflow: auto;
+    padding-right: 17px;
+
+    .item {
+      margin-bottom: 7px;
+      text-align: left;
+      margin-top: 10px;
+      margin-left: 20px;
+      font-size: 19px;
+    }
+  }
+
+  textarea.prompt {
+    margin-top: 40px;
+    background: #111;
+    border: 0;
+    border-bottom: 1px solid green;
+    outline: none;
+    color: green;
+    width: 100%;
+    height: 60px;
+    font-size: 25px;
+    font-family: monospace;
+  }
+}
+
+.sized {
+  font-size: 20px;
+}
+
+a {
+  color: green;
+}
