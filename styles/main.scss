@@ -49,3 +49,13 @@ body {
 a {
   color: green;
 }
+
+.skip {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  font-size: 13px;
+  text-decoration: underline;
+  opacity: 0.6;
+  cursor: pointer;
+}

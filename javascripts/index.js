@@ -125,6 +125,7 @@ function submitText () {
 
 function endIt () {
   $('.center').html('<h1 style="font-size: 50px">YOU SHOULDN\'T HAVE DONE THAT.</h1><br><div class="sized">hi, i\'m jona. i do web stuff.<br><a href="http://github.com/hg">github</a> -- <a href="http://twitter.com/arrowfunction">twitter</a></div>')
+  $('.skip').hide(0)
 }
 
 function append (text, s) {
