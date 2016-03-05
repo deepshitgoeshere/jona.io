@@ -28,7 +28,7 @@ var database = [
     "and how do you use it?"
   ],
   [
-    "we use this secret service called GITHUB. <a href='http://github.com'>here's my profile</a>",
+    "we use this secret service called GITHUB. <a href='https://github.com/hg'>here's my profile</a>",
     "woah neat."
   ],
   [
